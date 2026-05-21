@@ -1,0 +1,257 @@
+/* ===========================================
+   Cardlise Theme - Main Styles
+   Your theme's core CSS goes here.
+   =========================================== */
+
+@import './variables.css';
+
+/* Base card wrapper */
+.cardlise-card {
+  font-family: var(--theme-font);
+  max-width: var(--theme-max-width);
+  margin: 0 auto;
+  background: var(--theme-card-bg);
+  border-radius: var(--theme-radius);
+  box-shadow: var(--theme-shadow-lg);
+  overflow: hidden;
+  color: var(--theme-text);
+}
+
+/* Cover Section */
+.card-cover {
+  position: relative;
+  height: 180px;
+  background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* Profile Section */
+.card-profile {
+  text-align: center;
+  margin-top: -50px;
+  padding: 0 var(--theme-spacing);
+  position: relative;
+  z-index: 1;
+}
+
+.card-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid var(--theme-card-bg);
+  box-shadow: var(--theme-shadow-md);
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.card-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  color: var(--theme-text);
+}
+
+.card-designation {
+  font-size: 0.875rem;
+  color: var(--theme-text-muted);
+  margin-top: 0.25rem;
+}
+
+.card-company {
+  font-size: 0.8rem;
+  color: var(--theme-primary);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.card-bio {
+  font-size: 0.875rem;
+  color: var(--theme-text-muted);
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Contact Info */
+.card-contact {
+  padding: var(--theme-spacing);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #f9fafb;
+  border-radius: calc(var(--theme-radius) * 0.6);
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+  background: #f3f4f6;
+  transform: translateX(4px);
+}
+
+.contact-icon {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--theme-primary);
+  color: white;
+  font-size: 0.875rem;
+}
+
+.contact-text {
+  font-size: 0.875rem;
+  color: var(--theme-text);
+}
+
+/* Action Buttons */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 var(--theme-spacing) var(--theme-spacing);
+}
+
+.action-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: calc(var(--theme-radius) * 0.6);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.action-btn-primary {
+  background: var(--theme-primary);
+  color: white;
+}
+
+.action-btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.action-btn-secondary {
+  background: #f3f4f6;
+  color: var(--theme-text);
+}
+
+.action-btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* Links Section */
+.card-links {
+  padding: 0 var(--theme-spacing) var(--theme-spacing);
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: calc(var(--theme-radius) * 0.6);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.link-item:hover {
+  border-color: var(--theme-primary);
+  background: #fafafa;
+}
+
+/* Lead Form */
+.card-lead-form {
+  padding: var(--theme-spacing);
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.lead-form-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--theme-text);
+}
+
+.lead-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: calc(var(--theme-radius) * 0.6);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.lead-input:focus {
+  border-color: var(--theme-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.lead-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--theme-primary);
+  color: white;
+  border: none;
+  border-radius: calc(var(--theme-radius) * 0.6);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* Animations (when enabled) */
+@media (prefers-reduced-motion: no-preference) {
+  .cardlise-card[data-animations="true"] .contact-item,
+  .cardlise-card[data-animations="true"] .link-item {
+    animation: fadeInUp 0.4s ease forwards;
+    opacity: 0;
+  }
+
+  .cardlise-card[data-animations="true"] .contact-item:nth-child(1) { animation-delay: 0.1s; }
+  .cardlise-card[data-animations="true"] .contact-item:nth-child(2) { animation-delay: 0.2s; }
+  .cardlise-card[data-animations="true"] .contact-item:nth-child(3) { animation-delay: 0.3s; }
+  .cardlise-card[data-animations="true"] .contact-item:nth-child(4) { animation-delay: 0.4s; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .cardlise-card {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

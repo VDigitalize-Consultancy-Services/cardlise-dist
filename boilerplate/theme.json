@@ -1,0 +1,64 @@
+{
+  "name": "My Custom Theme",
+  "version": "1.0.0",
+  "description": "A beautiful custom card theme for Cardlise",
+  "long_description": "Detailed description of your theme. Explain what makes it unique, who it's for, and what customization options are available.",
+  "author": "Your Name",
+  "category": "creative",
+  "tags": ["modern", "clean", "professional"],
+  "price": 0,
+  "config_schema": {
+    "primary_color": {
+      "type": "color",
+      "label": "Primary Color",
+      "default": "#4F46E5",
+      "description": "Main accent color for buttons and highlights"
+    },
+    "secondary_color": {
+      "type": "color",
+      "label": "Secondary Color",
+      "default": "#7C3AED",
+      "description": "Secondary color for gradients and accents"
+    },
+    "font": {
+      "type": "select",
+      "label": "Font Family",
+      "default": "Inter",
+      "options": ["Inter", "Poppins", "Playfair Display", "Space Grotesk", "DM Sans", "Nunito"]
+    },
+    "layout": {
+      "type": "select",
+      "label": "Layout Style",
+      "default": "centered",
+      "options": ["centered", "left-aligned", "split"]
+    },
+    "border_radius": {
+      "type": "range",
+      "label": "Corner Roundness",
+      "default": "12px",
+      "min": "0px",
+      "max": "24px",
+      "step": "2px"
+    },
+    "show_animations": {
+      "type": "boolean",
+      "label": "Enable Animations",
+      "default": true
+    },
+    "background_style": {
+      "type": "select",
+      "label": "Background Style",
+      "default": "gradient",
+      "options": ["solid", "gradient", "pattern"]
+    }
+  },
+  "default_config": {
+    "primary_color": "#4F46E5",
+    "secondary_color": "#7C3AED",
+    "font": "Inter",
+    "layout": "centered",
+    "border_radius": "12px",
+    "show_animations": true,
+    "background_style": "gradient"
+  }
+}

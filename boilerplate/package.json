@@ -1,0 +1,14 @@
+{
+  "name": "cardlise-theme-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for developing Cardlise card themes",
+  "scripts": {
+    "dev": "vite --port 3001",
+    "build": "node scripts/build.js",
+    "validate": "node scripts/validate.js",
+    "preview": "vite preview --port 3001"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

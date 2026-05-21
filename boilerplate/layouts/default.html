@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{card.full_name}} - Digital Card</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="background: #f3f4f6; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+
+  <div class="cardlise-card" data-animations="true">
+    <!-- Cover -->
+    <div class="card-cover">
+      <!-- Cover image will be injected here if available -->
+    </div>
+
+    <!-- Profile -->
+    <div class="card-profile">
+      <img class="card-avatar" src="https://ui-avatars.com/api/?name=John+Doe&size=200&background=4F46E5&color=fff" alt="Profile" />
+      <h1 class="card-name">{{card.full_name}}</h1>
+      <p class="card-designation">{{card.designation}}</p>
+      <p class="card-company">{{card.company_name}}</p>
+      <p class="card-bio">{{card.bio}}</p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="card-contact">
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <span class="contact-text">{{card.email}}</span>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📱</div>
+        <span class="contact-text">{{card.mobile}}</span>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🌐</div>
+        <span class="contact-text">{{card.website}}</span>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <span class="contact-text">{{card.location}}</span>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="card-actions">
+      <button class="action-btn action-btn-primary">Save Contact</button>
+      <button class="action-btn action-btn-secondary">Share Card</button>
+    </div>
+
+    <!-- Links Section -->
+    <div class="card-links">
+      <!-- Links will be dynamically inserted -->
+      <div class="link-item">
+        <span>LinkedIn</span>
+        <span>→</span>
+      </div>
+      <div class="link-item">
+        <span>Twitter</span>
+        <span>→</span>
+      </div>
+      <div class="link-item">
+        <span>Portfolio</span>
+        <span>→</span>
+      </div>
+    </div>
+
+    <!-- Lead Form -->
+    <div class="card-lead-form">
+      <h3 class="lead-form-title">Get in Touch</h3>
+      <input class="lead-input" type="text" placeholder="Your Name" />
+      <input class="lead-input" type="email" placeholder="Email Address" />
+      <input class="lead-input" type="tel" placeholder="Phone Number" />
+      <textarea class="lead-input" placeholder="Message" rows="3" style="resize: none;"></textarea>
+      <button class="lead-submit">Send Message</button>
+    </div>
+  </div>
+
+</body>
+</html>

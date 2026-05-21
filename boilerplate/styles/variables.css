@@ -1,0 +1,30 @@
+/* ===========================================
+   Cardlise Theme - Variables
+   Define your theme's CSS custom properties here.
+   These map to config_schema options in theme.json
+   =========================================== */
+
+:root {
+  /* Primary colors - mapped from config */
+  --theme-primary: var(--config-primary-color, #4F46E5);
+  --theme-secondary: var(--config-secondary-color, #7C3AED);
+  
+  /* Font */
+  --theme-font: var(--config-font, 'Inter', sans-serif);
+  
+  /* Spacing & Layout */
+  --theme-radius: var(--config-border-radius, 12px);
+  --theme-spacing: 1.5rem;
+  --theme-max-width: 480px;
+  
+  /* Background */
+  --theme-bg: #ffffff;
+  --theme-card-bg: #ffffff;
+  --theme-text: #1f2937;
+  --theme-text-muted: #6b7280;
+  
+  /* Shadows */
+  --theme-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --theme-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --theme-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
